@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "169ad2b9-0c9b-4411-b293-bee02b56bd73",
+		"name": "Teste Mattos & cia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28287855"
+	},
+	"item": [
+		{
+			"name": "/estrategiaWMS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dsEstrategia\": \"RETIRA\",\r\n    \"nrPrioridade\": 10,\r\n    \"horarios\": [\r\n        {\r\n            \"dsHorarioInicio\": \"09:00\",\r\n            \"dsHorarioFinal\": \"10:00\",\r\n            \"nrPrioridade\": 40\r\n        },\r\n        {\r\n            \"dsHorarioInicio\": \"10:01\",\r\n            \"dsHorarioFinal\": \"11:00\",\r\n            \"nrPrioridade\": 30\r\n        },\r\n        {\r\n            \"dsHorarioInicio\": \"11:01\",\r\n            \"dsHorarioFinal\": \"12:00\",\r\n            \"nrPrioridade\": 20\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/estrategiaWMS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"estrategiaWMS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/estrategiaWMS/{cdEstrategia}/{dsHora}/{dsMinuto}/prioridade",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dsEstrategia\": \"RETIRA\",\r\n    \"nrPrioridade\": 10,\r\n    \"horarios\": [\r\n        {\r\n            \"dsHorarioInicio\": \"09:00\",\r\n            \"dsHorarioFinal\": \"10:00\",\r\n            \"nrPrioridade\": 40\r\n        },\r\n        {\r\n            \"dsHorarioInicio\": \"10:01\",\r\n            \"dsHorarioFinal\": \"11:00\",\r\n            \"nrPrioridade\": 30\r\n        },\r\n        {\r\n            \"dsHorarioInicio\": \"11:01\",\r\n            \"dsHorarioFinal\": \"12:00\",\r\n            \"nrPrioridade\": 20\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/estrategiaWMS/1/09/30/prioridade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"estrategiaWMS",
+						"1",
+						"09",
+						"30",
+						"prioridade"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
